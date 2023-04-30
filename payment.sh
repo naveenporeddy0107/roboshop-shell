@@ -1,5 +1,5 @@
 yum install python36 gcc python3-devel -y
-cp payment.service /etc/systemd/system/payment.service
+cp /home/centos/roboshop-shell/payment.service /etc/systemd/system/payment.service
 useradd roboshop
 mkdir /app
 curl -L -o /tmp/payment.zip https://roboshop-artifacts.s3.amazonaws.com/payment.zip
