@@ -1,4 +1,4 @@
-script_path=$(dirName $0)
+script_path=$(dirname $0)
 source ${script_path}/common.sh
 
 cp ${script_path}/mongo.repo /etc/yum.repos.d/mongo.repo
