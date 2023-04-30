@@ -1,6 +1,8 @@
-source common.sh
+script_path=$(dirName $0)
+source ${script_path}/common.sh
+
 yum install python36 gcc python3-devel -y
-cp /home/centos/roboshop-shell/payment.service /etc/systemd/system/payment.service
+cp script_path/payment.service /etc/systemd/system/payment.service
 useradd ${app_user}
 rm -rf /app
 mkdir /app
