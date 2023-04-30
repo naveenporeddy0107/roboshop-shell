@@ -1,5 +1,6 @@
+source common.sh
 yum install maven -y
-useradd roboshop
+useradd ${app_user}
 cp /home/centos/roboshop-shell/shipping.service /etc/systemd/system/shipping.service
 rm -rf /app
 mkdir /app
