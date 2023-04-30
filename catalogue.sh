@@ -26,7 +26,7 @@ echo -e "\e[32m>>>>>>>>>>> Installing node tool>>>>>>>\e[0m"
 npm install
 echo -e "\e[32m>>>>>>>>>>> copying catalogue service file>>>>>>>\e[0m"
 
-cp script_path/catalogue.service /etc/systemd/system/catalogue.service
+cp ${script_path}/catalogue.service /etc/systemd/system/catalogue.service
 echo -e "\e[32m>>>>>>>>>>> system ctl >>>>>>>\e[0m"
 
 systemctl daemon-reload
