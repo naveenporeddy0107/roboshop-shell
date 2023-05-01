@@ -10,7 +10,7 @@ echo -e "\e[32m>>>>>>>>> adding a user<<<<<<<\e[0m"
 
 useradd ${app_user}
 echo -e "\e[32m>>>>>>>>> Extracting cart source code<<<<<<<\e[0m"
-
+rm -rf /app
 mkdir /app
 curl -o /tmp/${component}.zip https://roboshop-artifacts.s3.amazonaws.com/${component}.zip
 cd /app
