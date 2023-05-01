@@ -1,8 +1,10 @@
 script=$(realpath "$0")
 script_path=$(dirname "$script")
+password=$1
 source ${script_path}/common.sh
 
 yum install python36 gcc python3-devel -y
+sed -i -e "s|rabbitmq_password_nonservice|${password}|" ${script_path}/payment.service
 cp ${script_path}/payment.service /etc/systemd/system/payment.service
 useradd ${app_user}
 rm -rf /app
